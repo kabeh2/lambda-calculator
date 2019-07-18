@@ -12,13 +12,19 @@ const Operators = props => {
   const [useOperators, setOperators] = useState(operators);
 
   return (
-    <div>
+    <div className="buttonArea-2">
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
        component matching the name on the provided file. Pass
        it any props needed by the child component*/}
 
       {Object.keys(useOperators).map((keyName, index) => (
-        <OperatorButton key={index} value={useOperators[keyName].char} />
+        <OperatorButton
+          key={index}
+          value={useOperators[keyName].value}
+          char={useOperators[keyName].char}
+          useDisplayValue={props.useDisplayValue}
+          setDisplayValue={props.setDisplayValue}
+        />
       ))}
     </div>
   );
