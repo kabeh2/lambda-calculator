@@ -1,10 +1,10 @@
 import React from "react";
 
-export const Display = () => {
+export const Display = props => {
   return (
     <div className="display">
       {/* Display any props data here */}
-      <h1>1</h1>
+      <h1>{props.displayValue}</h1>
     </div>
   );
 };
